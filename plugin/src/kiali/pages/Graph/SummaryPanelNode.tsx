@@ -252,6 +252,8 @@ export class SummaryPanelNodeComponent extends React.Component<SummaryPanelNodeC
             {shouldRenderService && <div>{renderBadgedLink(nodeData, NodeType.SERVICE)}</div>}
             {shouldRenderApp && <div>{renderBadgedLink(nodeData, NodeType.APP)}</div>}
             {shouldRenderWorkload && this.renderWorkloadSection(nodeData)}
+            {shouldRenderNetobservService && this.renderNetobservLink(nodeData, NodeType.SERVICE)}
+            {shouldRenderNetobservWorkload && this.renderNetobservLink(nodeData, NodeType.WORKLOAD)}
           </div>
         </div>
 
